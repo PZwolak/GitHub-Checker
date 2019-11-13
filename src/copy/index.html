@@ -7,7 +7,41 @@
 
   <body>
     <main>
-      <section></section>
+      <section class="git-checker">
+        <div class="git-checker__logo"></div>
+        <div class="git-checker__content container row">
+          <h1 class="col-12 pt-5">
+            GitHub Checker by Patryk Zwolak
+          </h1>
+          <h2 class="col-12 mb-5">
+            GitHub Checker allow you to easy way find any user from GitHub and
+            presented data in a user-friendly manner.
+          </h2>
+        </div>
+        <div class="git-checker__main container">
+          <div class="git-checker__main-type-section mb-5 row">
+            <div class="git-checker__main-type-input col-md-6">
+              <label class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;" />
+                <span class="label">Type user</span>
+                <span class="brdr"></span>
+              </label>
+            </div>
+            <div class="git-checker__main-type-button col-md-6">
+              <a class="main-type-button">Find user</a>
+            </div>
+          </div>
+          <div class="git-checker__main-result-section mt-2 container">
+            <div class="git-checker__main-result-user row">
+              <div class="git-checker__main-result-user-name col-md-4"></div>
+              <div class="git-checker__main-result-user-nick col-md-4"></div>
+              <div
+                class="git-checker__main-result-user-repo-quantity col-md-4"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Scripts -->
     <!-- <script src="js/detects.js"></script>

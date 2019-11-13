@@ -1,7 +1,9 @@
-/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
-console.log('Git file');
-
-
+/*! GitHub checker v0.0.1 | (c) 2019 Patryk Zwolak | MIT License | https://github.com/PZwolak/GitHub-Checker */
+const findUserBtn = document.querySelector('.main-type-button');
+const findUserInp = document.querySelector('#inp');
+const resultUserName = document.querySelector('.git-checker__main-result-user-name');
+const resultUserNick = document.querySelector('.git-checker__main-result-user-nick');
+const resultUserRepoQuantity = document.querySelector('.git-checker__main-result-user-repo-quantity');
 
 const client_id = "Iv1.268cfe02718c9950";
 const client_secret = "233cbfa1d72224313bde475febd35a3daeaf3db7";
@@ -22,12 +24,28 @@ const searchRepo = async (user) => {
     return userRepo;
 }
 const showData = () => {
-    searchUsers('PZwolak').then((res) => {
+    searchUsers(findUserInp.value).then((res) => {
         console.log(res);
+        resultUserName.innerHTML = `<p>name: <span>${res.name}</span></p>`;
+        resultUserNick.innerHTML = `<p>login: <span>${res.login}</span></p>`;
+        resultUserRepoQuantity.innerHTML = `<p>Repos: <span>${res.public_repos}</span></p>`;
     })
-    searchRepo('PZwolak').then((res) => {
-        console.log(res);
-    })
+    // searchRepo(findUserInp.value).then((res) => {
+    //     console.log(res);
+    //     const quantity = res.length;
+    //     const names = res.map((el) => {
+    //         return el.name;
+    //     });
+
+    //     console.log(quantity);
+    //     console.log(names);
+    // })
 }
 
-showData();
+
+
+
+
+findUserBtn.addEventListener('click', () => {
+    showData();
+});

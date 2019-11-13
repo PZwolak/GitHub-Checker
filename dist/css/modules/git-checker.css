@@ -1,0 +1,86 @@
+/*! GitHub checker v0.0.1 | (c) 2019 Patryk Zwolak | MIT License | https://github.com/PZwolak/GitHub-Checker */
+/* line 1, src/sass/modules/git-checker.scss */
+.git-checker {
+  background-color: #151515;
+  min-height: 100vh;
+}
+
+/* line 5, src/sass/modules/git-checker.scss */
+.git-checker__logo {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../svg/github-logo.svg);
+  background-size: 300px;
+  background-position: center;
+}
+
+/* line 16, src/sass/modules/git-checker.scss */
+.git-checker__content {
+  position: relative;
+  z-index: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+/* line 22, src/sass/modules/git-checker.scss */
+.git-checker__content h2 {
+  max-width: 800px;
+}
+
+/* line 28, src/sass/modules/git-checker.scss */
+.git-checker__main {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 33, src/sass/modules/git-checker.scss */
+.git-checker__main-type-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* line 38, src/sass/modules/git-checker.scss */
+.git-checker__main-type-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 45, src/sass/modules/git-checker.scss */
+.git-checker__main-type-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 48, src/sass/modules/git-checker.scss */
+.git-checker__main-type-button button {
+  min-width: 200px;
+}
+
+/* line 54, src/sass/modules/git-checker.scss */
+.git-checker__main-result-user {
+  color: var(--first-color);
+}
+
+/* line 57, src/sass/modules/git-checker.scss */
+.git-checker__main-result-user p {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* line 62, src/sass/modules/git-checker.scss */
+.git-checker__main-result-user p span {
+  text-transform: initial;
+  font-size: 1rem;
+  color: var(--white);
+}
