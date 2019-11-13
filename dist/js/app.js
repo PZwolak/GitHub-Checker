@@ -4,6 +4,7 @@ const findUserInp = document.querySelector('#inp');
 const resultUserName = document.querySelector('.git-checker__main-result-user-name');
 const resultUserNick = document.querySelector('.git-checker__main-result-user-nick');
 const resultUserRepoQuantity = document.querySelector('.git-checker__main-result-user-repo-quantity');
+const resultRepos = document.querySelector('.git-checker__main-result-repos');
 
 const client_id = "Iv1.268cfe02718c9950";
 const client_secret = "233cbfa1d72224313bde475febd35a3daeaf3db7";
@@ -30,16 +31,28 @@ const showData = () => {
         resultUserNick.innerHTML = `<p>login: <span>${res.login}</span></p>`;
         resultUserRepoQuantity.innerHTML = `<p>Repos: <span>${res.public_repos}</span></p>`;
     })
-    // searchRepo(findUserInp.value).then((res) => {
-    //     console.log(res);
-    //     const quantity = res.length;
-    //     const names = res.map((el) => {
-    //         return el.name;
-    //     });
+    searchRepo(findUserInp.value).then((res) => {
+        console.log(res);
+        const quantity = res.length;
 
-    //     console.log(quantity);
-    //     console.log(names);
-    // })
+        const reposTitle = document.createElement('div');
+        reposTitle.classList.add('git-checker__main-result-repos-title');
+        reposTitle.innerHTML = `<p>Repos: </p>`
+        resultRepos.appendChild(reposTitle);
+
+        const names = res.map((el) => {
+
+            resultRepos.innerHTML += (
+                `asd`
+            )
+            return el.name;
+        });
+
+
+
+        console.log(quantity);
+        console.log(names);
+    })
 }
 
 
