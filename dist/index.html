@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Copy Me</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GitHub Checker</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-
   <body>
     <main>
       <section class="git-checker">
@@ -15,39 +17,42 @@
           </h1>
           <h2 class="col-12 mb-5">
             GitHub Checker allow you to easy way find any user from GitHub and
-            presented data in a user-friendly manner.
+            present data in a user-friendly manner.
           </h2>
         </div>
         <div class="git-checker__main container">
           <div class="git-checker__main-type-section mb-5 row">
-            <div class="git-checker__main-type-input col-md-6">
+            <div
+              class="git-checker__main-type-input mb-4 mb-md-0 col-12 col-md-6 "
+            >
               <label class="inp">
                 <input type="text" id="inp" placeholder="&nbsp;" />
                 <span class="label">Type user</span>
                 <span class="brdr"></span>
               </label>
             </div>
-            <div class="git-checker__main-type-button col-md-6">
+            <div class="git-checker__main-type-button col-12 col-md-6">
               <a class="main-type-button">Find user</a>
             </div>
           </div>
           <div class="git-checker__main-result-section mt-2 container">
             <div class="git-checker__main-result-user row">
-              <div class="git-checker__main-result-user-name col-md-4"></div>
-              <div class="git-checker__main-result-user-nick col-md-4"></div>
               <div
-                class="git-checker__main-result-user-repo-quantity col-md-4"
+                class="git-checker__main-result-user-name disabled col-12 col-md-4"
+              ></div>
+              <div
+                class="git-checker__main-result-user-nick disabled col-12 col-md-4"
+              ></div>
+              <div
+                class="git-checker__main-result-user-repo-quantity disabled col-12 col-md-4"
               ></div>
             </div>
-            <div class="git-checker__main-result-repos row"></div>
+            <div class="git-checker__main-result-repos disabled row"></div>
+            <div class="git-checker__main-result-pagination"></div>
           </div>
         </div>
       </section>
     </main>
-    <!-- Scripts -->
-    <!-- <script src="js/detects.js"></script>
-	<script src="js/another-file.js"></script>
-	<script src="js/main.polyfills.js"></script> -->
     <script src="js/app.js"></script>
   </body>
 </html>

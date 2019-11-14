@@ -3,7 +3,6 @@ html {
   font-family: 'Big Shoulders Text', cursive;
   letter-spacing: .1rem;
 
-
   h1 {
     color: var(--first-color);
     margin-bottom: 30px;
@@ -88,9 +87,7 @@ html {
           +.brdr {
             transform: scaleX(1);
           }
-
         }
-
       }
     }
   }

@@ -533,15 +533,15 @@ main {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 960px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 720px;
+//   }
+// }
 
 @media (min-width: 992px) {
   .container {
@@ -571,7 +571,7 @@ main {
 
   .container,
   .container-sm {
-    max-width: 540px;
+    max-width: 960px;
   }
 }
 
@@ -580,7 +580,7 @@ main {
   .container,
   .container-sm,
   .container-md {
-    max-width: 720px;
+    max-width: 960px;
   }
 }
 

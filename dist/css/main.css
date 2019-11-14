@@ -626,14 +626,7 @@ main {
 @media (min-width: 576px) {
   /* line 535, src/sass/components/_bootstrap.scss */
   .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 541, src/sass/components/_bootstrap.scss */
-  .container {
-    max-width: 720px;
+    max-width: 960px;
   }
 }
 
@@ -668,7 +661,7 @@ main {
   /* line 572, src/sass/components/_bootstrap.scss */
   .container,
   .container-sm {
-    max-width: 540px;
+    max-width: 960px;
   }
 }
 
@@ -677,7 +670,7 @@ main {
   .container,
   .container-sm,
   .container-md {
-    max-width: 720px;
+    max-width: 960px;
   }
 }
 
@@ -12778,7 +12771,7 @@ html {
   letter-spacing: .1rem;
 }
 
-/* line 7, src/sass/components/_base.scss */
+/* line 6, src/sass/components/_base.scss */
 body h1,
 html h1 {
   color: var(--first-color);
@@ -12788,7 +12781,7 @@ html h1 {
   text-align: center;
 }
 
-/* line 15, src/sass/components/_base.scss */
+/* line 14, src/sass/components/_base.scss */
 body h2,
 html h2 {
   font-size: 2rem;
@@ -12798,7 +12791,7 @@ html h2 {
   font-weight: 400;
 }
 
-/* line 24, src/sass/components/_base.scss */
+/* line 23, src/sass/components/_base.scss */
 body .inp,
 html .inp {
   position: relative;
@@ -12810,7 +12803,7 @@ html .inp {
   cursor: auto;
 }
 
-/* line 33, src/sass/components/_base.scss */
+/* line 32, src/sass/components/_base.scss */
 body .inp .label,
 html .inp .label {
   position: absolute;
@@ -12827,7 +12820,7 @@ html .inp .label {
   transition: all .3s ease;
 }
 
-/* line 46, src/sass/components/_base.scss */
+/* line 45, src/sass/components/_base.scss */
 body .inp .brdr,
 html .inp .brdr {
   position: absolute;
@@ -12844,7 +12837,7 @@ html .inp .brdr {
   transition: all .3s ease;
 }
 
-/* line 58, src/sass/components/_base.scss */
+/* line 57, src/sass/components/_base.scss */
 body .inp input,
 html .inp input {
   -webkit-appearance: none;
@@ -12863,7 +12856,7 @@ html .inp input {
   transition: all .3s ease;
 }
 
-/* line 74, src/sass/components/_base.scss */
+/* line 73, src/sass/components/_base.scss */
 body .inp input:not(:placeholder-shown) + span,
 html .inp input:not(:placeholder-shown) + span {
   color: var(--white);
@@ -12871,14 +12864,14 @@ html .inp input:not(:placeholder-shown) + span {
           transform: translateY(-30px) scale(0.8);
 }
 
-/* line 80, src/sass/components/_base.scss */
+/* line 79, src/sass/components/_base.scss */
 body .inp input:focus,
 html .inp input:focus {
   background: none;
   outline: none;
 }
 
-/* line 84, src/sass/components/_base.scss */
+/* line 83, src/sass/components/_base.scss */
 body .inp input:focus + span,
 html .inp input:focus + span {
   color: var(--first-color);
@@ -12886,14 +12879,14 @@ html .inp input:focus + span {
           transform: translateY(-30px) scale(0.8);
 }
 
-/* line 88, src/sass/components/_base.scss */
+/* line 87, src/sass/components/_base.scss */
 body .inp input:focus + span + .brdr,
 html .inp input:focus + span + .brdr {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-/* line 99, src/sass/components/_base.scss */
+/* line 96, src/sass/components/_base.scss */
 body .main-type-button,
 html .main-type-button {
   position: relative;
@@ -12911,7 +12904,7 @@ html .main-type-button {
   cursor: pointer;
 }
 
-/* line 113, src/sass/components/_base.scss */
+/* line 110, src/sass/components/_base.scss */
 body .main-type-button:after,
 html .main-type-button:after {
   content: '';
@@ -12924,7 +12917,7 @@ html .main-type-button:after {
   z-index: -2;
 }
 
-/* line 124, src/sass/components/_base.scss */
+/* line 121, src/sass/components/_base.scss */
 body .main-type-button:before,
 html .main-type-button:before {
   content: '';
@@ -12939,14 +12932,14 @@ html .main-type-button:before {
   z-index: -1;
 }
 
-/* line 136, src/sass/components/_base.scss */
+/* line 133, src/sass/components/_base.scss */
 body .main-type-button:hover,
 html .main-type-button:hover {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 140, src/sass/components/_base.scss */
+/* line 137, src/sass/components/_base.scss */
 body .main-type-button:hover:before,
 html .main-type-button:hover:before {
   width: 100%;
@@ -12956,9 +12949,10 @@ html .main-type-button:hover:before {
 .git-checker {
   background-color: #151515;
   min-height: 100vh;
+  overflow: hidden;
 }
 
-/* line 5, src/sass/modules/git-checker.scss */
+/* line 6, src/sass/modules/git-checker.scss */
 .git-checker__logo {
   position: fixed;
   z-index: 1;
@@ -12970,7 +12964,7 @@ html .main-type-button:hover:before {
   background-position: center;
 }
 
-/* line 16, src/sass/modules/git-checker.scss */
+/* line 17, src/sass/modules/git-checker.scss */
 .git-checker__content {
   position: relative;
   z-index: 2;
@@ -12980,60 +12974,322 @@ html .main-type-button:hover:before {
   margin: 0 auto;
 }
 
-/* line 22, src/sass/modules/git-checker.scss */
-.git-checker__content h2 {
-  max-width: 800px;
+/* line 23, src/sass/modules/git-checker.scss */
+.git-checker__content h1 {
+  -webkit-animation: h1animate 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+          animation: h1animate 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15);
 }
 
-/* line 28, src/sass/modules/git-checker.scss */
-.git-checker__main {
-  position: relative;
-  z-index: 2;
+/* line 27, src/sass/modules/git-checker.scss */
+.git-checker__content h2 {
+  max-width: 800px;
+  -webkit-animation: h2animate 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+          animation: h2animate 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15);
 }
 
 /* line 33, src/sass/modules/git-checker.scss */
+.git-checker__main {
+  position: relative;
+  z-index: 2;
+  -webkit-animation: typesectionanimate .5s ease;
+          animation: typesectionanimate .5s ease;
+}
+
+/* line 39, src/sass/modules/git-checker.scss */
 .git-checker__main-type-section {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* line 38, src/sass/modules/git-checker.scss */
-.git-checker__main-type-input {
+@media (min-width: 768px) {
+  /* line 44, src/sass/modules/git-checker.scss */
+  .git-checker__main-type-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+/* line 50, src/sass/modules/git-checker.scss */
+.git-checker__main-type-input .inp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  margin: 0 auto;
 }
 
-/* line 45, src/sass/modules/git-checker.scss */
+@media (min-width: 768px) {
+  /* line 50, src/sass/modules/git-checker.scss */
+  .git-checker__main-type-input .inp {
+    margin: initial;
+  }
+}
+
+/* line 60, src/sass/modules/git-checker.scss */
 .git-checker__main-type-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/* line 48, src/sass/modules/git-checker.scss */
+@media (min-width: 768px) {
+  /* line 60, src/sass/modules/git-checker.scss */
+  .git-checker__main-type-button {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/* line 68, src/sass/modules/git-checker.scss */
 .git-checker__main-type-button button {
   min-width: 200px;
 }
 
-/* line 54, src/sass/modules/git-checker.scss */
+/* line 73, src/sass/modules/git-checker.scss */
 .git-checker__main-result-user {
   color: var(--first-color);
 }
 
-/* line 57, src/sass/modules/git-checker.scss */
+/* line 76, src/sass/modules/git-checker.scss */
 .git-checker__main-result-user p {
   text-transform: uppercase;
   font-size: 1.25rem;
   text-align: center;
 }
 
-/* line 62, src/sass/modules/git-checker.scss */
+/* line 81, src/sass/modules/git-checker.scss */
 .git-checker__main-result-user p span {
   text-transform: initial;
   font-size: 1rem;
   color: var(--white);
+}
+
+/* line 89, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--first-color);
+}
+
+/* line 96, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-title p {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+/* line 102, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--white);
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  /* line 102, src/sass/modules/git-checker.scss */
+  .git-checker__main-result-repos-element {
+    margin-bottom: 10px;
+  }
+}
+
+/* line 112, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 112, src/sass/modules/git-checker.scss */
+  .git-checker__main-result-repos-element > div {
+    padding-bottom: 5px;
+  }
+}
+
+/* line 119, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p {
+  margin: 0;
+}
+
+/* line 122, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span {
+  color: var(--white);
+}
+
+/* line 125, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon {
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+/* line 134, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon.id {
+  background-image: url(../svg/key.svg);
+}
+
+/* line 138, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon.private {
+  background-image: url(../svg/lock.svg);
+}
+
+/* line 142, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon.stars {
+  background-image: url(../svg/star.svg);
+}
+
+/* line 146, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon.forks {
+  background-image: url(../svg/code-fork-symbol.svg);
+}
+
+/* line 150, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element > div p span.icon.watchers {
+  background-image: url(../svg/eye.svg);
+}
+
+/* line 159, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos-element-name {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* line 159, src/sass/modules/git-checker.scss */
+  .git-checker__main-result-repos-element-name {
+    font-size: 1rem;
+    text-align: initial;
+  }
+}
+
+/* line 169, src/sass/modules/git-checker.scss */
+.git-checker__main-result-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  padding: 20px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* line 177, src/sass/modules/git-checker.scss */
+.git-checker__main-result-pagination span {
+  width: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 182, src/sass/modules/git-checker.scss */
+.git-checker__main-result-pagination span.active {
+  color: var(--first-color);
+}
+
+/* line 189, src/sass/modules/git-checker.scss */
+.git-checker__main-result-user-name, .git-checker__main-result-user-nick, .git-checker__main-result-user-repo-quantity {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 195, src/sass/modules/git-checker.scss */
+.git-checker__main-result-user-name.disabled, .git-checker__main-result-user-nick.disabled, .git-checker__main-result-user-repo-quantity.disabled {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 201, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 205, src/sass/modules/git-checker.scss */
+.git-checker__main-result-repos.disabled {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+@-webkit-keyframes h1animate {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes h1animate {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes h2animate {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes h2animate {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@-webkit-keyframes typesectionanimate {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes typesectionanimate {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }

@@ -1,6 +1,7 @@
 .git-checker {
     background-color: #151515;
     min-height: 100vh;
+    overflow: hidden;
 
     &__logo {
         position: fixed;
@@ -19,15 +20,20 @@
         justify-content: center;
         margin: 0 auto;
 
-        h2 {
-            max-width: 800px;
+        h1 {
+            animation: h1animate .5s cubic-bezier(.51, .92, .24, 1.15);
         }
 
+        h2 {
+            max-width: 800px;
+            animation: h2animate .5s cubic-bezier(.51, .92, .24, 1.15);
+        }
     }
 
     &__main {
         position: relative;
         z-index: 2;
+        animation: typesectionanimate .5s ease;
     }
 
     &__main-type-section {
@@ -36,19 +42,32 @@
     }
 
     &__main-type-input {
-        display: flex;
-        justify-content: flex-end;
+        @media(min-width:768px) {
+            display: flex;
+            justify-content: flex-end;
+        }
 
+        .inp {
+            display: flex;
+            margin: 0 auto;
 
+            @media(min-width:768px) {
+                margin: initial;
+            }
+        }
     }
 
     &__main-type-button {
         display: flex;
+        justify-content: center;
+
+        @media(min-width:768px) {
+            justify-content: flex-start;
+        }
 
         button {
             min-width: 200px;
         }
-
     }
 
     &__main-result-user {
@@ -65,6 +84,157 @@
                 color: var(--white);
             }
         }
+    }
 
+    &__main-result-repos {
+        display: flex;
+        flex-direction: column;
+        color: var(--first-color);
+    }
+
+    &__main-result-repos-title {
+        p {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__main-result-repos-element {
+        display: flex;
+        border-bottom: 1px solid var(--white);
+        margin-bottom: 25px;
+        padding-bottom: 5px;
+
+        @media(min-width:768px) {
+            margin-bottom: 10px;
+        }
+
+        >div {
+            padding-bottom: 15px;
+
+            @media(min-width:768px) {
+                padding-bottom: 5px;
+            }
+
+            p {
+                margin: 0;
+
+                span {
+                    color: var(--white);
+
+                    &.icon {
+                        width: 17px;
+                        height: 17px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        display: inline-block;
+                        margin: 0 10px 0 0;
+
+                        &.id {
+                            background-image: url(../svg/key.svg);
+                        }
+
+                        &.private {
+                            background-image: url(../svg/lock.svg);
+                        }
+
+                        &.stars {
+                            background-image: url(../svg/star.svg);
+                        }
+
+                        &.forks {
+                            background-image: url(../svg/code-fork-symbol.svg);
+                        }
+
+                        &.watchers {
+                            background-image: url(../svg/eye.svg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__main-result-repos-element-name {
+        font-size: 1.5rem;
+        text-align: center;
+
+        @media(min-width:768px) {
+            font-size: 1rem;
+            text-align: initial;
+        }
+    }
+
+    &__main-result-pagination {
+        display: flex;
+        justify-content: center;
+        color: white;
+        padding: 20px 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        span {
+            width: 25px;
+            text-align: center;
+            cursor: pointer;
+
+            &.active {
+                color: var(--first-color);
+            }
+        }
+    }
+
+    //Animations
+    &__main-result-user-name,
+    &__main-result-user-nick,
+    &__main-result-user-repo-quantity {
+        transform: scale(1);
+        transition: .3s ease;
+
+        &.disabled {
+            transform: scale(0);
+            transition: .3s ease;
+        }
+    }
+
+    &__main-result-repos {
+        transform: translateX(0%);
+        transition: .3s ease;
+
+        &.disabled {
+            transform: translateX(-200%);
+            transition: .3s ease;
+        }
+    }
+}
+
+@keyframes h1animate {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes h2animate {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes typesectionanimate {
+    0% {
+        transform: translateY(1000px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }
